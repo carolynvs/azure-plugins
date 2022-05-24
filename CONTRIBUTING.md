@@ -12,7 +12,7 @@ project.
 ---
 
 * [Initial setup](#initial-setup)
-* [Makefile explained](#makefile-explained)
+* [Magefile explained](#magefile-explained)
 
 ---
 
@@ -22,9 +22,16 @@ You need to have [porter installed](https://porter.sh/install) first. Then run
 `make build install`. This will build and install the plugin into your porter
 home directory.
 
-## Makefile explained
+## Magefile explained
 
-Here are the most common Makefile tasks:
+We use [mage](https://magefile.org) instead of make. If you don't have mage installed already,
+you can install it with `go run mage.go EnsureMage`.
+
+[mage]: https://magefile.org
+
+Mage targets are not case-sensitive, but in our docs we use camel case to make
+it easier to read. You can run either `mage Build` or `mage build` for
+example. Run `mage` without any arguments to see a list of the available targets.
 
 * `build` builds the plugin.
 * `install` installs the plugin into **~/.porter/plugins**.
