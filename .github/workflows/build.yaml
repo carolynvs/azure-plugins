@@ -5,6 +5,9 @@ on: [workflow_dispatch, push, pull_request]
 env:
   # Make mage super verbose ALL THE TIME
   MAGEFILE_VERBOSE: true
+  # DO NOT MERGE: TESTING USE ONLY
+  PORTER_RELEASE_REPOSITORY: github.com/carolynvs/azure-plugins
+  PORTER_PACKAGES_REMOTE: https://github.com/carolynvs/porter-packages.git
 
 jobs:
   build:
